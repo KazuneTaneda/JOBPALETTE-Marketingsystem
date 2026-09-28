@@ -10,6 +10,7 @@ erDiagram
     ACCOUNT ||--o{ JOB_POSTING : "publishes"
     JOB_POSTING ||--o{ APPLICANT : "receives"
     JOB_POSTING ||--o{ JOB_DAILY_STAT : "has"
+    JOB_POSTING ||--o{ JOB_KEYWORD_STAT : "has"
     APPLICANT }o--|| REFERRAL_PIPELINE_STAGE : "progresses through"
     JOB_DAILY_STAT }o--|| WEEKLY_REPORT : "aggregated into"
     WEEKLY_REPORT ||--o{ WEEKLY_REPORT_ACTION : "recommends"
@@ -42,6 +43,16 @@ erDiagram
         int clicks "nullable"
         int applications
         decimal cost
+    }
+    JOB_KEYWORD_STAT {
+        string stat_id PK
+        string job_id FK
+        string keyword
+        date stat_date
+        int impressions "nullable"
+        int clicks "nullable"
+        int applications "nullable"
+        string source_csv_type "keyword別CSV。60日ローリングのため取込日を必ず記録"
     }
     APPLICANT {
         string applicant_id PK

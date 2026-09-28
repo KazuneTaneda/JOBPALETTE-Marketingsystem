@@ -34,6 +34,7 @@
 | 07 | [非機能要件](07_non_functional_requirements.md) | 権限、個人情報、性能、保守性 |
 | 08 | [MVPの範囲](08_mvp_scope.md) | Must / Should / Could / Not Now |
 | 09 | [未決事項](09_open_questions.md) | 決定済み D-番号、未決 Q-番号 |
+| 10 | [求人ボックス キーワード別分析の設計](10_kyujinbox_keyword_analysis.md) | 検索語句→求人→35歳以下有効応募→面談→CPAの分析パイプライン、直近のネクストアクション |
 
 ## dr-system との関係
 
